@@ -1,0 +1,22 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;   
+}
+
+.card-funcionario{
+    border: 1px solid black;
+    background-color: aqua;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px black;
+    width: max-content;
+    padding: 8px 16px;
+}
+
+#funcionarios{
+    display: flex;
+    overflow: scroll;
+    max-width: 1440px;
+    
+}
