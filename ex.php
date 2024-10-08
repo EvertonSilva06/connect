@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
+    <link rel="stylesheet" href="ex.css">
 </head>
 <body>
-    <form action="" method="get">
-        <label for="">Nome:</label>
-        <input type="text" id="" name="nome" require>
-        
-        <label for="">Salario:</label>
-        <input type="salario" id="salario" name="salario" require>
-        
-        <label for="">Telefone:</label>
-        <input type="number" id="" name="telefone" require>
-        
-        <label for="">Idade:</label>
-        <input type="number" id="" name="idade" require>
-        
-        <label for="">Cargo:</label>
-        <input type="text" id="" name="cargo" require>
-        
-        <input type="submit" value="Enviar">
-    </form>
+    <div class="box">
+     
+            <form action="" method="get">
+                <fieldset>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" class="inputUser"required><br><br>
+
+                    <label for="salario">Salário:</label>
+                    <input type="number" id="salario" class="inputUser"required><br><br>
+
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" class="inputUser"required><br><br>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" class="inputUser"required><br><br>
+
+                    
+                    <label for="cargo">Cargo:</label>
+                    <select id="cargo">
+                        <option value="gerente">Gerente</option>
+                        <option value="desenvolvedor">Desenvolvedor</option>
+                        <option value="analista">Analista</option>
+                        <option value="estagiario">Estagiário</option>
+                    </select><br><br>
+
+                    <button type="submit">Cadastrar</button>
+                </fieldset>
+            </form>
+      
+    </div>
 <?php
     $servidor = 'localhost';
     $usuario = 'root';
