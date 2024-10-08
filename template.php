@@ -1,13 +1,13 @@
 
-<div class="card-funcionario" >
+<div class="card-funcionarios" >
     <header>
-        <h2>Nome:<?= $funcionario['nome']?></h2>
-        <p>Cargo:<?= $funcionario['cargo']?> </p>
-        <p>Idade:<?= $funcionario['idade']?> </p>
+        <h2>Nome:<?= $funcionarios['nome']?></h2>
+        <p>Cargo:<?= $funcionarios['cargo']?> </p>
+        <p>Idade:<?= $funcionarios['idade']?> </p>
        
     </header>
     <footer>
-        <a href="tel">telefone <?= $funcionario['telefone']?></a>
-        <span>ID: <?=$funcionario['id']?></span>
+        <a href="tel">telefone <?= $funcionarios['telefone']?></a>
+        <span>ID: <?=$funcionarios['id']?></span>
     </footer>
 </div>
