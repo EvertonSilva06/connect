@@ -7,7 +7,7 @@
        
     </header>
     <footer>
-        <a href="tel">telefone <?= $funcionarios['telefone']?></a>
+        <a href="tel">Telefone: <?= $funcionarios['telefone']?></a>
         <span>ID: <?=$funcionarios['id']?></span>
     </footer>
 </div>

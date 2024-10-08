@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="ex.css">
 </head>
 <body>
-    <div class="box">
-     
-            <form action="" method="post">
+    <header id="meu">
+        <h1>CADASTRA AE</h1>
+    </header>
+    <form id ="sec-cad"action="" method="post">   
+        <div class="box">
                 <fieldset>
+                    <legend><b>Cadastro</b></legend>
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" class="inputUser"required><br><br>
 
@@ -29,17 +32,31 @@
 
                     
 
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" id="btn-bt">Cadastrar</button>
                 </fieldset>
-            </form>  
-   </div> 
+            </div> 
+    </form>  
   
+  
+   <section id="lista">
+        <form method="post" id="filtro">
+            <fieldset id="fieldset-list">
+                <legend><b>CARGOS</b></legend>
+                        <select name="list-cargo" id="list">
+                            <option value="Desenvolvedor">Desenvolvedor</option>
+                            <option value="CEO">CEO</option>
+                            <option value="Analista">Analista</option>
+                        </select>
+                        <input type="submit" id="btn-input" value="Buscar">
+            </fieldset>
+        </form>
+    </section>
 <?php
 
 
 $servidor = 'localhost';
 $usuario = 'root';
-$senha = '';
+$senha = 'suporte';
 $banco_de_dados = 'banco';
 
 
@@ -65,15 +82,20 @@ function renderTemplate($funcionarios)
     include "template.php";
 }
 
-$selectFuncionarios = $conexao ->query('select * from funcionarios');
+function Lista ($cargo) {
+    global $conexao;
+    $selectCargo = $conexao->query("select * from funcionarios where cargo = '$cargo';");       
+    $rowsFuncionarios = $selectCargo->fetch_all(MYSQLI_ASSOC);
 
-$rowFuncionarios = $selectFuncionarios -> fetch_all(MYSQLI_ASSOC);
+    foreach ($rowsFuncionarios as $funcionarios) {
+        renderTemplate($funcionarios);
+    }
+}
 
-    foreach($rowFuncionarios as $funcionarios){
-    renderTemplate($funcionarios);
-    };
-
-
+if (isset($_POST['list-cargo'])) {
+    $cargo = $_POST['list-cargo'];
+    Lista($cargo);
+}
 
 $conexao->close();
  
