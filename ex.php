@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="ex.css">
 </head>
 <body>
-    <header id="meu">
+    <!-- <header id="meu">
         <h1>CADASTRA AE</h1>
-    </header>
+    </header> -->
     <form id ="sec-cad"action="" method="post">   
         <div class="box">
                 <fieldset>
@@ -20,7 +20,7 @@
                     <label for="cargo">Cargo:</label>
                     <input type="text" id="cargo" name="cargo" class="inputUser"required><br><br>
                     
-                    
+            
                     <label for="idade">Idade:</label>
                     <input type="number" id="idade" name="idade" class="inputUser"required><br><br>
                     
