@@ -1,4 +1,8 @@
+# PHP
 
+MySql Querys
+
+```SQL
 create database funcionarios;
 use funcionarios;
 
@@ -10,6 +14,4 @@ create table funcionarios(
     idade int not null,
     telefone int not null
 );
-select * from funcionarios;	
-
-truncate funcionarios;	
+```

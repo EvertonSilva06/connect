@@ -20,17 +20,17 @@
 //      $banco_de_dados = 'banco';
  
 //      //criando um objeto dessa conexão
-      $conexao = mysqli_connect($servidor,$usuario,$senha,$banco_de_dados);
+    //   $conexao = mysqli_connect($servidor,$usuario,$senha,$banco_de_dados);
  
     
     
-        $selectFuncionarios = $conexao ->query('select * from funcionarios');
+    //     $selectFuncionarios = $conexao ->query('select * from funcionarios');
  
-      $rowFuncionarios = $selectFuncionarios -> fetch_all(MYSQLI_ASSOC);
+    //   $rowFuncionarios = $selectFuncionarios -> fetch_all(MYSQLI_ASSOC);
     
-     foreach($rowFuncionarios as $funcionario){
-        renderTemplate($funcionario);
-      };
+    //  foreach($rowFuncionarios as $funcionario){
+    //     renderTemplate($funcionario);
+    //   };
      
 //      $conexao->close();
  

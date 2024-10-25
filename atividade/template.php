@@ -12,3 +12,4 @@
         <a href="#"><span>ID: <?=$funcionarios['id']?></span></a>
     </footer>
 </div>
+<!-- arrumado -->
